@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#loader {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  position: fixed;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  text-align: center;
+}
+
+#loader h1 {
+  font-size: 6vw;
+  line-height: 5vw;
+  font-family: "freight big pro";
+  font-weight: 100;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 9;
+}
+
+#loader video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 6;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav h1 {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1vw;
+  color: #000;
+  padding: 1vw;
+  background-color: red;
+  border: 0.15vw solid #000;
+  border-radius: 100%;
+}
+
+#yellow1 {
+  height: 100%;
+  width: 100%;
+  background-color: #f5e41b;
+  position: absolute;
+  z-index: 8;
+}
+
+#yellow2 {
+  height: 100%;
+  width: 100%;
+  background-color: #f5e41b;
+  position: absolute;
+  z-index: 7;
+}
+#nav {
+  position: absolute;
+  width: 100%;
+  padding: 30px 40px;
+  z-index: 10;
+}
+
+#nav svg path {
+  fill: #000;
+}
+#main {
+  background-color: #000;
+}
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #f5e41b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  transition: all ease 0.5s;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.elem {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.elem .moving .blur {
+  position: absolute;
+  width: 35%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  background: linear-gradient(to right, #f5e31bf2, #f5e41b, #f5e31bf2);
+  box-shadow: 8px 0px 15px 20px #f5e41b, -8px 0px 15px 20px #f5e41b;
+  z-index: 2;
+}
+
+.elem h2 {
+  font-size: 6.5vw;
+  position: relative;
+  line-height: 5.5vw;
+  z-index: 1;
+  font-weight: 100;
+}
+
+.elem .moving {
+  width: 100%;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%) scaleY(0);
+  transition: all ease 0.3s;
+  overflow: hidden;
+}
+.elem .moving .moving-in {
+  background-color: #f5e41b;
+  display: inline-block;
+  color: #000;
+  animation-name: moving;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.elem .moving .moving-in h5 {
+  color: #000;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-right: 2.5vw;
+  font-weight: 500;
+  transition: all ease 0.3s;
+  opacity: 0;
+  transition-delay: 0.2s;
+}
+
+.elem:hover .moving {
+  transform: translate(0, -50%) scaleY(1);
+}
+
+.elem:hover .moving h5 {
+  opacity: 1;
+}
+
+.elem:hover h2 {
+  font-style: italic;
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(223, 223, 210);
+}
+
+.image-container {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.img-div {
+  height: 36vw;
+  width: 28.5vw;
+  position: relative;
+  overflow: hidden;
+  margin: 35px 25px;
+}
+
+.img-div img {
+  height: 36vw;
+  width: 28.5vw;
+  object-fit: cover;
+  transition: all ease 0.4s;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: all ease 0.4s;
+  z-index: 2;
+}
+
+.overlay p {
+  font-size: 3vw;
+  font-weight: 100;
+  font-style: italic;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  transition: all ease 0.3s;
+}
+
+.img-div:hover .overlay {
+  background-color: #000;
+}
+
+.img-div:hover .overlay p {
+  opacity: 1;
+}
+
+.img-div:hover img {
+  scale: 1.1;
+}
+
+#page1 h1 {
+  font-size: 6vw;
+  line-height: 5vw;
+  font-family: "freight big pro";
+  font-weight: 100;
+  letter-spacing: -1px;
+}
+
+#footer {
+  height: 18vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6vw;
+  overflow: hidden;
+}
+
+#footer #last-section {
+  height: 30%;
+  width: 100%;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 1vw;
+}
+
+#footer h2 {
+  cursor: pointer;
+  font-weight: 300;
+  color: #fff;
+  background-color: #000;
+  border: 0.1vw solid #000;
+  border-radius: 0.5vw;
+}
+
+.animation-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+}
+
+/* Bouncing ball styling */
+.bouncing-ball {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+}
+
+/* Keyframes for bouncing animation */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3vw);
+  }
+  60% {
+    transform: translateY(-3vw);
+  }
+}
+
+@keyframes bounce2 {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-2vw);
+  }
+  60% {
+    transform: translateX(-2vw);
+  }
+}
+
+.bouncing-ball:hover,
+.bouncing-ball:active {
+  background-color: red;
+  animation: bounce2 0.05s infinite;
+}
